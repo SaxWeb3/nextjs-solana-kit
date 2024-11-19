@@ -55,7 +55,7 @@ export default function ButtonSend() {
     }
     return (
       <div>
-        <button onClick={sendSPL}></button>
+        <button onClick={sendSPL}> Send message</button>
       </div>
     );
 };
