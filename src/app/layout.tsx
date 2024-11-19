@@ -1,27 +1,11 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
 
-import { Footer } from "@/components/layout/footer";
-import { Header } from "@/components/layout/header";
 import { Toaster } from "@/components/ui/sonner";
 
 import config from "@/config";
 import { ReactQueryProvider } from "@/providers/rtk";
 
-import { Providers } from "@/app/Providers"; // Импортируем Solana Wallet провайдер
-
-import "swiper/css";
-import "../assets/styles/tailwind.css";
-import "../assets/styles/themes.css";
-
-const geistSans = localFont({
-  src: "../assets/fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-});
-const geistMono = localFont({
-  src: "../assets/fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-});
+import { Providers } from "@/app/Providers";
 
 export const metadata: Metadata = {
   metadataBase: new URL(config.seo.url),
@@ -44,18 +28,15 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="ru"
-      className={`${geistSans.variable} ${geistMono.variable} dark`}
+      lang="en"
       suppressHydrationWarning={true}
     >
       <body className="min-h-screen antialiased">
         <ReactQueryProvider>
           <Providers>
             {" "}
-            {/* Добавляем обертку Solana Wallet */}
-            <Header transparencyBehavior="top" />
+            {/* Solana Wallet */}
             <main className="h-full min-h-screen">{children}</main>
-            <Footer />
             <Toaster position="bottom-center" />
           </Providers>
         </ReactQueryProvider>
