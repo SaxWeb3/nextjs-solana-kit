@@ -1,4 +1,4 @@
-The nextjs-solana-kit is the ideal solution for your needs.
+The nextjs-solana-kit is the ideal solution for your quick start.
 This Starter Kit enables the creation of a dAPP on Solana with NextJS.
 This project is based on the GitHub repositories linked below.
 * https://github.com/aeminium-labs/nextjs-solana-starter-kit/
